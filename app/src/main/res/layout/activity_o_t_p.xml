@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/textbox_outline"
+    android:padding="5dp"
+    tools:context=".Activites.OTPActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/mobile_auth"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imageView2"
+        android:id="@+id/phoneLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Verify +8801316057864"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+         />
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/phoneLbl"
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Enter your OTP code to verify your phone number"
+        android:textSize="10sp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/phoneLbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <com.mukesh.OtpView
+                android:id="@+id/otpView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:inputType="number"
+                android:focusableInTouchMode="true"
+                android:itemBackground="@color/grey"
+                android:textColor="@android:color/black"
+                app:OtpItemCount="6"
+                app:OtpLineColor="@color/teal_700"
+                app:OtpViewType="line"
+                />
+
+            <Button
+                android:id="@+id/continue_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button"
+                android:text="Continue"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
